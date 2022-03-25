@@ -9,6 +9,7 @@ import { SplitScreen } from './layout/SplitScreen';
 import { people } from './shared/utils/people';
 import { products } from './shared/utils/products';
 import { LargeProductListItem } from './features/products/LargeProductListItem';
+import { Modal } from './layout/Modal/index.jsx';
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
     //   <RightSideComponent message="Hello world" />
     // </SplitScreen>
     <>
-      <RegularList
+      {/* <RegularList
         items={people}
         resourceName="person"
         itemComponent={SmallPersonListItem}
@@ -45,7 +46,10 @@ const App = () => {
         items={products}
         resourceName="product"
         itemComponent={LargeProductListItem}
-      />
+      /> */}
+      <Modal>
+        <LargeProductListItem product={products[0]} />
+      </Modal>
     </>
   );
 };
